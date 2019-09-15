@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:decorate xmlns="http://www.w3.org/1999/xhtml"
+             xmlns:h="http://java.sun.com/jsf/html"
+             xmlns:f="http://java.sun.com/jsf/core"
+             xmlns:ui="http://java.sun.com/jsf/facelets"
+             xmlns:p="http://primefaces.org/ui"
+             template="admin.xhtml">
+
+    <h:head>
+        <title>Login</title>
+    </h:head>
+
+    <h:body>
+        <h:form>
+            <p:commandButton value="Marcar consulta" action="#{consultaBean.novo()}" update="@all" />
+
+            <p:dataTable id="lista" value="#{consultaBean.consultas}" var="consultat">
+                <p:column headerText="Paciente">
+                    <h:outputText value="#{consultat.paciente.nome}" />
+                </p:column>
+                <p:column headerText="Médico">
+                    <h:outputText value="#{consultat.medico.nome}" />
+                </p:column>
+                <p:column headerText="Data e horário">
+                    <h:outputText value="#{consultat.dataHora}" />
+                </p:column>
+                <p:column headerText="Operações">
+                    <p:commandButton value="Cancelar" action="#{consultaBean.cancelar(consultat.id)}"  update="@all" />
+                </p:column>
+            </p:dataTable>
+
+
+            <p:dialog id="dialogo" widgetVar="dialogo" header="Marcar consulta" modal="true" dynamic="true" draggable="false" resizable="false">
+                <p:panelGrid columns="2">
+                    <h:outputLabel value="Paciente" />
+                    <p:selectOneMenu id="selecPaciente" value="#{consultaBean.idPaciente}" filter="true" filterMatchMode="startsWith">
+                        <f:selectItems value="#{consultaBean.pacientes}" var="pac" itemLabel="#{pac.nome}" itemValue="#{pac.id}" />
+                    </p:selectOneMenu>
+
+                    <h:outputLabel value="Médico" />
+                    <p:selectOneMenu id="selecMedico" value="#{consultaBean.idMedico}" filter="true" filterMatchMode="startsWith">
+                        <f:selectItems value="#{consultaBean.medicos}" var="med" itemLabel="#{med.nome}" itemValue="#{med.id}" />
+                    </p:selectOneMenu>
+
+                    <h:outputLabel value="Data e horário" />
+                    <p:calendar id="data" value="#{consultaBean.consulta.dataHora}" pattern="dd/MM/yyyy HH:mm" showOn="button" />
+                </p:panelGrid>
+
+                <p:commandButton value="Salvar" action="#{consultaBean.salvar()}" update="lista"/>
+            </p:dialog>
+        </h:form>
+    </h:body>
+</ui:decorate>

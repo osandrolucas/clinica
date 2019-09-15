@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:decorate xmlns="http://www.w3.org/1999/xhtml"
+             xmlns:h="http://java.sun.com/jsf/html"
+             xmlns:f="http://java.sun.com/jsf/core"
+             xmlns:ui="http://java.sun.com/jsf/facelets"
+             xmlns:p="http://primefaces.org/ui"
+             template="admin.xhtml">
+
+    <h:head>
+        <title>Login</title>
+    </h:head>
+
+    <h:body>
+        <h:form>
+            <p:commandButton value="Novo" action="#{atendenteBean.novo()}" update="@form dialogo" />
+
+            <p:dataTable id="lista" value="#{atendenteBean.atendentes}" var="atendentet">
+                <p:column headerText="Nome">
+                    <h:outputText value="#{atendentet.nome}" />
+                </p:column>
+                <p:column headerText="Administrador">
+                    <h:outputText value="#{atendentet.admin ? 'Sim' : 'Não'}" />
+                </p:column>
+                <p:column headerText="Operações">
+                    <p:commandButton value="Alterar" action="#{atendenteBean.alterar(atendentet.id)}" update="@form" />
+                    <p:commandButton value="Excluir" action="#{atendenteBean.excluir(atendentet.id)}"  update="@form" />
+                </p:column>
+            </p:dataTable>
+
+            <p:dialog id="dialogo" widgetVar="dialogo" header="#{atendenteBean.atendente.id > 0 ? 'Alterar' : 'Novo'}" modal="true" dynamic="true" draggable="false" resizable="false">
+                <p:panelGrid columns="2">
+                    <h:outputLabel value="CPF" />
+                    <p:inputText id="cpf" value="#{atendenteBean.atendente.cpf}" required="true" disabled="#{atendenteBean.atendente.id > 0}"/>
+                    
+                    <h:outputLabel value="Nome" />
+                    <p:inputText id="nome" value="#{atendenteBean.atendente.nome}"/>
+
+                    <h:outputLabel value="Administrador" />
+                    <p:inputSwitch id="admin" value="#{atendenteBean.atendente.admin}" onLabel="Sim" offLabel="Não"/>
+                </p:panelGrid>
+                <p:commandButton value="Salvar" action="#{atendenteBean.salvar()}" update="lista" />
+            </p:dialog>
+        </h:form>
+    </h:body>
+</ui:decorate>
