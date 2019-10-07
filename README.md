@@ -16,6 +16,7 @@ O objetivo é automaticar o processo de validação do código fonte e deploy.
 
 ## Ambiente
 * Lubuntu 19.04 (Máquina Virtual)
+* Apache Server
 
 ## Comandos para Deploy (Ambiente de Testes)
 Para gerar o pacote WAR, o seguinte comando deve ser executado no diretório raiz do projeto (o qual contém o arquivo "pom.xml"):
@@ -28,3 +29,15 @@ Para executar o projeto, será necessário copiar o .clinica.war, citado acima, 
 * sudo service tomcat9 restart
 
 Após isto, acesse o sistema via navegador através da URL http://localhost:8080/clinica/
+
+# Apache Commands
+
+Check the status of apache web server: 
+* sudo service apache2 status
+
+Stop, start, and restart apache web server:
+* sudo service apache2 stop
+* sudo service apache2 start
+* sudo service apache2 restart
+
+
