@@ -1,5 +1,3 @@
-<?xml version='1.0' encoding='UTF-8' ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <ui:decorate xmlns="http://www.w3.org/1999/xhtml"
              xmlns:h="http://java.sun.com/jsf/html"
              xmlns:f="http://java.sun.com/jsf/core"
@@ -7,46 +5,40 @@
              xmlns:p="http://primefaces.org/ui"
              template="admin.xhtml">
 
-    <h:head>
-        <title>Login</title>
-    </h:head>
+    <h:form>
+        <p:commandButton value="Novo" action="#{medicoBean.novo()}" update="@form dialogo" />
 
-    <h:body>
-        <h:form>
-            <p:commandButton value="Novo" action="#{medicoBean.novo()}" update="@form dialogo" />
+        <p:dataTable id="lista" value="#{medicoBean.medicos}" var="medicot">
+            <p:column headerText="Nome">
+                <h:outputText value="#{medicot.nome}" />
+            </p:column>
+            <p:column headerText="Especialidade">
+                <h:outputText value="#{medicot.especialidade}" />
+            </p:column>
+            <p:column headerText="Registro">
+                <h:outputText value="#{medicot.registro}" />
+            </p:column>
+            <p:column headerText="Operações">
+                <p:commandButton value="Alterar" action="#{medicoBean.alterar(medicot.id)}" update="@form" />
+                <p:commandButton value="Excluir" action="#{medicoBean.excluir(medicot.id)}"  update="@form" />
+            </p:column>
+        </p:dataTable>
 
-            <p:dataTable id="lista" value="#{medicoBean.medicos}" var="medicot">
-                <p:column headerText="Nome">
-                    <h:outputText value="#{medicot.nome}" />
-                </p:column>
-                <p:column headerText="Especialidade">
-                    <h:outputText value="#{medicot.especialidade}" />
-                </p:column>
-                <p:column headerText="Registro">
-                    <h:outputText value="#{medicot.registro}" />
-                </p:column>
-                <p:column headerText="Operações">
-                    <p:commandButton value="Alterar" action="#{medicoBean.alterar(medicot.id)}" update="@form" />
-                    <p:commandButton value="Excluir" action="#{medicoBean.excluir(medicot.id)}"  update="@form" />
-                </p:column>
-            </p:dataTable>
+        <p:dialog id="dialogo" widgetVar="dialogo" header="#{medicoBean.medico.id > 0 ? 'Alterar' : 'Novo'}" modal="true" dynamic="true" draggable="false" resizable="false">
+            <p:panelGrid columns="2">
+                <h:outputLabel value="CPF" />
+                <p:inputText id="cpf" value="#{medicoBean.medico.cpf}" required="true" disabled="#{medicoBean.medico.id > 0}"/>
+                
+                <h:outputLabel value="Nome" />
+                <p:inputText id="nome" value="#{medicoBean.medico.nome}"/>
 
-            <p:dialog id="dialogo" widgetVar="dialogo" header="#{medicoBean.medico.id > 0 ? 'Alterar' : 'Novo'}" modal="true" dynamic="true" draggable="false" resizable="false">
-                <p:panelGrid columns="2">
-                    <h:outputLabel value="CPF" />
-                    <p:inputText id="cpf" value="#{medicoBean.medico.cpf}" required="true" disabled="#{medicoBean.medico.id > 0}"/>
-                    
-                    <h:outputLabel value="Nome" />
-                    <p:inputText id="nome" value="#{medicoBean.medico.nome}"/>
+                <h:outputLabel value="Registro" />
+                <p:inputText id="registro" value="#{medicoBean.medico.registro}"/>
 
-                    <h:outputLabel value="Registro" />
-                    <p:inputText id="registro" value="#{medicoBean.medico.registro}"/>
-
-                    <h:outputLabel value="Especialidade" />
-                    <p:inputText id="especialidade" value="#{medicoBean.medico.especialidade}"/>
-                </p:panelGrid>
-                <p:commandButton value="Salvar" action="#{medicoBean.salvar()}" update="lista" />
-            </p:dialog>
-        </h:form>
-    </h:body>
+                <h:outputLabel value="Especialidade" />
+                <p:inputText id="especialidade" value="#{medicoBean.medico.especialidade}"/>
+            </p:panelGrid>
+            <p:commandButton value="Salvar" action="#{medicoBean.salvar()}" update="lista" />
+        </p:dialog>
+    </h:form>
 </ui:decorate>
