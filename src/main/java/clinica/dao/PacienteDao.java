@@ -21,6 +21,9 @@ public class PacienteDao extends UsuarioDao implements GenericDao<Paciente>  {
                         Statement.RETURN_GENERATED_KEYS)) {
 
             int idUsuario = inserirUsuario(paciente);
+	    if (idUsuario == -1) {
+	        return -1;
+	    }
             
             Endereco end = paciente.getEndereco();
             
@@ -32,10 +35,8 @@ public class PacienteDao extends UsuarioDao implements GenericDao<Paciente>  {
             stmt.setString(6, paciente.getTelefone1());
             stmt.setString(7, paciente.getTelefone2());
             stmt.execute();
-            ResultSet chaves = stmt.getGeneratedKeys();
-            if (chaves.next()) {
-                chavePrimaria = chaves.getInt(1);
-            }
+
+	    chavePrimaria = idUsuario;
         } catch (SQLException e) {
             System.out.println("Exceção SQL: " + e.getMessage());
         } catch (ClassNotFoundException e) {

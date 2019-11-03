@@ -19,15 +19,16 @@ public class MedicoDao extends UsuarioDao implements GenericDao<Medico>  {
                         Statement.RETURN_GENERATED_KEYS)) {
 
             int idUsuario = inserirUsuario(medico);
+	    if (idUsuario == -1) {
+                return -1;
+	    }
             
             stmt.setInt(1, idUsuario);
             stmt.setString(2, medico.getRegistro());
             stmt.setString(3, medico.getEspecialidade());
             stmt.execute();
-            ResultSet chaves = stmt.getGeneratedKeys();
-            if (chaves.next()) {
-                chavePrimaria = chaves.getInt(1);
-            }
+
+	    chavePrimaria = idUsuario;
         } catch (SQLException e) {
             System.out.println("Exceção SQL: " + e.getMessage());
         } catch (ClassNotFoundException e) {

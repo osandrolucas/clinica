@@ -19,14 +19,15 @@ public class AtendenteDao extends UsuarioDao implements GenericDao<Atendente> {
                         Statement.RETURN_GENERATED_KEYS)) {
 
             int idUsuario = inserirUsuario(atendente);
+	    if (idUsuario == -1) {
+                return -1;
+	    }
             
             stmt.setInt(1, idUsuario);
             stmt.setBoolean(2, atendente.isAdmin());
             stmt.execute();
-            ResultSet chaves = stmt.getGeneratedKeys();
-            if (chaves.next()) {
-                chavePrimaria = chaves.getInt(1);
-            }
+
+	    chavePrimaria = idUsuario;
         } catch (SQLException e) {
             System.out.println("Exceção SQL: " + e.getMessage());
         } catch (ClassNotFoundException e) {

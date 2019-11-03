@@ -1,4 +1,3 @@
-DROP TABLE IF EXISTS pessoa; -- Esta tabela caiu em desuso
 DROP TABLE IF EXISTS consulta;
 DROP TABLE IF EXISTS atendente;
 DROP TABLE IF EXISTS medico;
