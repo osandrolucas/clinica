@@ -18,7 +18,24 @@ O objetivo é automaticar o processo de validação do código fonte e deploy.
 * Lubuntu 19.04 (Máquina Virtual)
 * Apache Server
 
-## Comandos para Deploy (Ambiente de Testes)
+#Premissas
+Temos como premissa a criação de um banco de dados (MySQL) para que seja possível a realização dos testes antes da execução do deploy.
+
+Para criar o banco de dados, são necessários os seguintes comandos:
+mysql -u root -p
+(senha)
+CREATE DATABASE clinica;
+CREATE DATABASE clinicatest;
+QUIT
+
+mysql -u root -p clinica < clinica.sql
+(senha)
+
+mysql -u root -p clinicatest < clinica.sql
+(senha)
+
+
+## Comandos para Deploy
 Para gerar o pacote WAR, o seguinte comando deve ser executado no diretório raiz do projeto (o qual contém o arquivo "pom.xml"):
 * mvn package
 
