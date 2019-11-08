@@ -38,7 +38,8 @@ public class ClinicaTest {
 		atendenteDao = new AtendenteDao();
 		consultaDao = new ConsultaDao();
 
-		testInsertMedico("Alberto", "111", "123", "Cardiologia");
+		//Simulação de erro de digitação
+		testInsertMedico("Albertp", "111", "123", "Cardiologia");
 		testInsertMedico("Ricardo", "222", "234", "Oftalmologia");
 
 		Endereco endereco = new Endereco("Rua A", "1", "", "Porto Alegre");
@@ -59,6 +60,12 @@ public class ClinicaTest {
 		assertNotNull(m1);
 		Medico m2 = medicoDao.findByID(medicoIds.get(1));
 		assertNotNull(m2);
+
+		//Correção do erro de digitação
+		m1.setNome("Alberto");
+		medicoDao.update(m1);
+		m1 = medicoDao.findByID(m1.getId());
+		assertEquals(m1.getNome(), "Alberto");
 
 		testInsertConsulta(p1, m2, new Date(2019, 10, 31, 16, 0, 0));
 
