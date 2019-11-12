@@ -18,7 +18,7 @@ O objetivo é automaticar o processo de validação do código fonte e deploy.
 * Lubuntu 19.04 (Máquina Virtual)
 * Apache Server
 
-#Premissas
+## Premissas
 Temos como premissa a criação de um banco de dados (MySQL) para que seja possível a realização dos testes antes da execução do deploy.
 
 Para acessar o mysql:
