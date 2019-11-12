@@ -21,6 +21,19 @@ O objetivo é automaticar o processo de validação do código fonte e deploy.
 #Premissas
 Temos como premissa a criação de um banco de dados (MySQL) para que seja possível a realização dos testes antes da execução do deploy.
 
+Para acessar o mysql:
+mysql -u root -p
+pass: root
+
+Para acessar o database:
+use nome_database;
+
+Para listar os bancos existentes:
+show databases;
+
+Para listar as tabelas existentes:
+show tables;
+
 Para criar o banco de dados, são necessários os seguintes comandos:
 mysql -u root -p
 (senha)
