@@ -1,0 +1,205 @@
+{
+  "id": "a670ee2f-8b06-4f1a-9b00-74fe4865bf94",
+  "version": "2.0",
+  "name": "cadastro_medico",
+  "url": "http://localhost:8080",
+  "tests": [{
+    "id": "1d54f3f5-59c3-4791-8506-24f3878719b3",
+    "name": "Untitled",
+    "commands": [{
+      "id": "02635661-ad23-446c-b420-23272a277a8e",
+      "comment": "",
+      "command": "open",
+      "target": "/clinica/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4f8143d8-4382-4e73-bbfe-27f3f0981dc5",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1050x841",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0f967566-8378-4e17-a65e-73b7d606c461",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Médicos",
+      "targets": [
+        ["linkText=Médicos", "linkText"],
+        ["css=.ui-state-hover", "css:finder"],
+        ["xpath=//div[@id='j_idt7']/ul/li[4]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'medicos.xhtml')]", "xpath:href"],
+        ["xpath=//li[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Médicos')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4b1e71f6-2373-4166-b26d-807d0d1e9330",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ui-button-text",
+      "targets": [
+        ["css=.ui-button-text", "css:finder"],
+        ["xpath=//button[@id='j_idt15:j_idt16']/span", "xpath:idRelative"],
+        ["xpath=//button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Novo')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "cbf8b8bc-bc44-44fa-9b43-8597c553faf2",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.ui-button-text",
+      "targets": [
+        ["css=.ui-button-text", "css:finder"],
+        ["xpath=//button[@id='j_idt15:j_idt16']/span", "xpath:idRelative"],
+        ["xpath=//button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Novo')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7bf91a26-1443-4687-bbae-01310c8021bc",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=#j_idt15\\3Aj_idt16 > .ui-button-text",
+      "targets": [
+        ["css=#j_idt15\\3Aj_idt16 > .ui-button-text", "css:finder"],
+        ["xpath=//button[@id='j_idt15:j_idt16']/span", "xpath:idRelative"],
+        ["xpath=//button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Novo')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d55f21b2-f821-4ce4-8481-c596b2e758ea",
+      "comment": "",
+      "command": "click",
+      "target": "id=j_idt15:cpf",
+      "targets": [
+        ["id=j_idt15:cpf", "id"],
+        ["name=j_idt15:cpf", "name"],
+        ["css=#j_idt15\\3A cpf", "css:finder"],
+        ["xpath=//input[@id='j_idt15:cpf']", "xpath:attributes"],
+        ["xpath=//table[@id='j_idt15:j_idt26']/tbody/tr/td[2]/input", "xpath:idRelative"],
+        ["xpath=//td[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "17463205-40f8-4f26-b7df-e4de34451f50",
+      "comment": "",
+      "command": "type",
+      "target": "id=j_idt15:cpf",
+      "targets": [
+        ["id=j_idt15:cpf", "id"],
+        ["name=j_idt15:cpf", "name"],
+        ["css=#j_idt15\\3A cpf", "css:finder"],
+        ["xpath=//input[@id='j_idt15:cpf']", "xpath:attributes"],
+        ["xpath=//table[@id='j_idt15:j_idt26']/tbody/tr/td[2]/input", "xpath:idRelative"],
+        ["xpath=//td[2]/input", "xpath:position"]
+      ],
+      "value": "12345678900"
+    }, {
+      "id": "f00e07df-1625-4e7e-bf7e-8d0549e60747",
+      "comment": "",
+      "command": "click",
+      "target": "id=j_idt15:nome",
+      "targets": [
+        ["id=j_idt15:nome", "id"],
+        ["name=j_idt15:nome", "name"],
+        ["css=#j_idt15\\3Anome", "css:finder"],
+        ["xpath=//input[@id='j_idt15:nome']", "xpath:attributes"],
+        ["xpath=//table[@id='j_idt15:j_idt26']/tbody/tr[2]/td[2]/input", "xpath:idRelative"],
+        ["xpath=//tr[2]/td[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0218a1ab-8a36-4311-8950-4d79428c9b82",
+      "comment": "",
+      "command": "type",
+      "target": "id=j_idt15:nome",
+      "targets": [
+        ["id=j_idt15:nome", "id"],
+        ["name=j_idt15:nome", "name"],
+        ["css=#j_idt15\\3Anome", "css:finder"],
+        ["xpath=//input[@id='j_idt15:nome']", "xpath:attributes"],
+        ["xpath=//table[@id='j_idt15:j_idt26']/tbody/tr[2]/td[2]/input", "xpath:idRelative"],
+        ["xpath=//tr[2]/td[2]/input", "xpath:position"]
+      ],
+      "value": "DR chapatin"
+    }, {
+      "id": "91c49dc0-b7ed-4772-abc2-93b7bb7bf71c",
+      "comment": "",
+      "command": "type",
+      "target": "id=j_idt15:registro",
+      "targets": [
+        ["id=j_idt15:registro", "id"],
+        ["name=j_idt15:registro", "name"],
+        ["css=#j_idt15\\3Aregistro", "css:finder"],
+        ["xpath=//input[@id='j_idt15:registro']", "xpath:attributes"],
+        ["xpath=//table[@id='j_idt15:j_idt26']/tbody/tr[3]/td[2]/input", "xpath:idRelative"],
+        ["xpath=//tr[3]/td[2]/input", "xpath:position"]
+      ],
+      "value": "12355"
+    }, {
+      "id": "112f819f-c77f-48ae-ace5-8bbf12a89f9c",
+      "comment": "",
+      "command": "type",
+      "target": "id=j_idt15:especialidade",
+      "targets": [
+        ["id=j_idt15:especialidade", "id"],
+        ["name=j_idt15:especialidade", "name"],
+        ["css=#j_idt15\\3A especialidade", "css:finder"],
+        ["xpath=//input[@id='j_idt15:especialidade']", "xpath:attributes"],
+        ["xpath=//table[@id='j_idt15:j_idt26']/tbody/tr[4]/td[2]/input", "xpath:idRelative"],
+        ["xpath=//tr[4]/td[2]/input", "xpath:position"]
+      ],
+      "value": "Clinico Geral"
+    }, {
+      "id": "462e0866-ae22-4a0e-848e-82b5f0669832",
+      "comment": "",
+      "command": "click",
+      "target": "css=#j_idt15\\3Aj_idt31 > .ui-button-text",
+      "targets": [
+        ["css=#j_idt15\\3Aj_idt31 > .ui-button-text", "css:finder"],
+        ["xpath=//button[@id='j_idt15:j_idt31']/span", "xpath:idRelative"],
+        ["xpath=//div[2]/button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Salvar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6b4a91b7-26bf-4790-b9b4-ba3180a17bd2",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=#j_idt15\\3Aj_idt31 > .ui-button-text",
+      "targets": [
+        ["css=#j_idt15\\3Aj_idt31 > .ui-button-text", "css:finder"],
+        ["xpath=//button[@id='j_idt15:j_idt31']/span", "xpath:idRelative"],
+        ["xpath=//div[2]/button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Salvar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2964e800-07cd-48ef-8000-82eb89fa86f3",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=#j_idt15\\3Aj_idt31 > .ui-button-text",
+      "targets": [
+        ["css=#j_idt15\\3Aj_idt31 > .ui-button-text", "css:finder"],
+        ["xpath=//button[@id='j_idt15:j_idt31']/span", "xpath:idRelative"],
+        ["xpath=//div[2]/button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Salvar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "e8324b16-d2d7-404c-8690-12d17ea71446",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["1d54f3f5-59c3-4791-8506-24f3878719b3"]
+  }],
+  "urls": ["http://localhost:8080/"],
+  "plugins": []
+}
