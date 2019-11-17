@@ -33,6 +33,8 @@ public class ConsultaBean implements Serializable {
     }
     
     public void novo() {
+        carregarDados();
+
         consulta = new Consulta();
         idPaciente = null;
         idMedico = null;
