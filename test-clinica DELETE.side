@@ -1,0 +1,127 @@
+{
+  "id": "866a1959-cb0d-4546-94c5-2514b901d1a7",
+  "version": "2.0",
+  "name": "test-clinica DELETE",
+  "url": "http://localhost:8080/clinica/index.xhtml",
+  "tests": [{
+    "id": "e456474f-a3f1-4fe8-8f4d-bec6383a75de",
+    "name": "DELETE ALL ",
+    "commands": [{
+      "id": "b7fe8994-9748-443e-8969-4850861d347f",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8080/clinica/index.xhtml",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d87713c7-569c-40b1-86c6-8b0e1ecfa17c",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1440x847",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d8cd5f91-4242-474f-b7e4-77675ce27db8",
+      "comment": "",
+      "command": "click",
+      "target": "css=#menu-atendentes > .ui-menuitem-text",
+      "targets": [
+        ["css=#menu-atendentes > .ui-menuitem-text", "css:finder"],
+        ["xpath=//a[@id='menu-atendentes']/span", "xpath:idRelative"],
+        ["xpath=//li[5]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Atendentes')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "eda19a10-04ce-426b-973c-74a3ab8353c6",
+      "comment": "",
+      "command": "click",
+      "target": "css=#j_idt8\\3Alista\\3A 1\\3Aj_idt16 > .ui-button-text",
+      "targets": [
+        ["css=#j_idt8\\3Alista\\3A 1\\3Aj_idt16 > .ui-button-text", "css:finder"],
+        ["xpath=//button[@id='j_idt8:lista:1:j_idt16']/span", "xpath:idRelative"],
+        ["xpath=//tr[2]/td[3]/button[2]/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "dc76bc34-b496-4cc3-9fa3-8d53c0b754f0",
+      "comment": "",
+      "command": "click",
+      "target": "css=#menu-medicos > .ui-menuitem-text",
+      "targets": [
+        ["css=#menu-medicos > .ui-menuitem-text", "css:finder"],
+        ["xpath=//a[@id='menu-medicos']/span", "xpath:idRelative"],
+        ["xpath=//li[4]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Médicos')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a7f67395-a672-4492-9a8a-768158d2d3a4",
+      "comment": "",
+      "command": "click",
+      "target": "css=#j_idt8\\3Alista\\3A 1\\3Aj_idt18 > .ui-button-text",
+      "targets": [
+        ["css=#j_idt8\\3Alista\\3A 1\\3Aj_idt18 > .ui-button-text", "css:finder"],
+        ["xpath=//button[@id='j_idt8:lista:1:j_idt18']/span", "xpath:idRelative"],
+        ["xpath=//tr[2]/td[4]/button[2]/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5b517380-df0f-46e8-820d-b7a5c0028b8f",
+      "comment": "",
+      "command": "click",
+      "target": "css=#menu-pacientes > .ui-menuitem-text",
+      "targets": [
+        ["css=#menu-pacientes > .ui-menuitem-text", "css:finder"],
+        ["xpath=//a[@id='menu-pacientes']/span", "xpath:idRelative"],
+        ["xpath=//li[3]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Pacientes')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "28531ac1-3d4c-4e24-8cb6-74f5e6e6697d",
+      "comment": "",
+      "command": "click",
+      "target": "css=#j_idt8\\3Alista\\3A 1\\3Aj_idt16 > .ui-button-text",
+      "targets": [
+        ["css=#j_idt8\\3Alista\\3A 1\\3Aj_idt16 > .ui-button-text", "css:finder"],
+        ["xpath=//button[@id='j_idt8:lista:1:j_idt16']/span", "xpath:idRelative"],
+        ["xpath=//tr[2]/td[3]/button[2]/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "46743bea-b847-4c54-a4d8-b3ef86119235",
+      "comment": "",
+      "command": "click",
+      "target": "css=#menu-consultas > .ui-menuitem-text",
+      "targets": [
+        ["css=#menu-consultas > .ui-menuitem-text", "css:finder"],
+        ["xpath=//a[@id='menu-consultas']/span", "xpath:idRelative"],
+        ["xpath=//li[2]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Consultas')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "55955f0f-365e-4384-a7c8-6cfdb2c88a1b",
+      "comment": "",
+      "command": "click",
+      "target": "css=#j_idt8\\3Alista\\3A 1\\3Aj_idt17 > .ui-button-text",
+      "targets": [
+        ["css=#j_idt8\\3Alista\\3A 1\\3Aj_idt17 > .ui-button-text", "css:finder"],
+        ["xpath=//button[@id='j_idt8:lista:1:j_idt17']/span", "xpath:idRelative"],
+        ["xpath=//tr[2]/td[4]/button/span", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "81db0c8b-3a18-4267-8414-352025d9c51a",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["e456474f-a3f1-4fe8-8f4d-bec6383a75de"]
+  }],
+  "urls": [],
+  "plugins": []
+}

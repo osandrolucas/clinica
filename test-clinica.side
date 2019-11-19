@@ -1,0 +1,545 @@
+{
+  "id": "87413c74-b944-4136-adf3-c7b4ca665757",
+  "version": "2.0",
+  "name": "test-clinica",
+  "url": "http://localhost:8080/clinica/index.xhtml",
+  "tests": [{
+    "id": "d66c617d-ca96-43b0-a963-cf788939901c",
+    "name": "Cadastro de Paciente",
+    "commands": [{
+      "id": "840da4c6-9d9e-4e80-a321-1c76d8bd1b44",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8080/clinica/index.xhtml",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4db612bc-d199-43c4-9402-710d303d90bc",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "550x692",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2217fe5d-698c-4e49-b317-c13149403989",
+      "comment": "",
+      "command": "click",
+      "target": "css=#menu-pacientes > .ui-menuitem-text",
+      "targets": [
+        ["css=#menu-pacientes > .ui-menuitem-text", "css:finder"],
+        ["xpath=//a[@id='menu-pacientes']/span", "xpath:idRelative"],
+        ["xpath=//li[3]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Pacientes')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "17a2c440-08fa-43ec-9705-5cef458ee0d7",
+      "comment": "",
+      "command": "click",
+      "target": "css=#j_idt8\\3Aj_idt9 > .ui-button-text",
+      "targets": [
+        ["css=#j_idt8\\3Aj_idt9 > .ui-button-text", "css:finder"],
+        ["xpath=//button[@id='j_idt8:j_idt9']/span", "xpath:idRelative"],
+        ["xpath=//button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Novo')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1fdf862b-9b38-4e45-a596-390e12ea9096",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=#j_idt8\\3Aj_idt9 > .ui-button-text",
+      "targets": [
+        ["css=#j_idt8\\3Aj_idt9 > .ui-button-text", "css:finder"],
+        ["xpath=//button[@id='j_idt8:j_idt9']/span", "xpath:idRelative"],
+        ["xpath=//button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Novo')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1147eef9-6f86-452a-a2ae-a25413d2a228",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=#j_idt8\\3Aj_idt9 > .ui-button-text",
+      "targets": [
+        ["css=#j_idt8\\3Aj_idt9 > .ui-button-text", "css:finder"],
+        ["xpath=//button[@id='j_idt8:j_idt9']/span", "xpath:idRelative"],
+        ["xpath=//button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Novo')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "bd2896d9-2fba-4d13-afc4-57e97aebfeb1",
+      "comment": "",
+      "command": "click",
+      "target": "id=j_idt8:cpf",
+      "targets": [
+        ["id=j_idt8:cpf", "id"],
+        ["name=j_idt8:cpf", "name"],
+        ["css=#j_idt8\\3A cpf", "css:finder"],
+        ["xpath=//input[@id='j_idt8:cpf']", "xpath:attributes"],
+        ["xpath=//table[@id='j_idt8:j_idt17']/tbody/tr/td[2]/input", "xpath:idRelative"],
+        ["xpath=//td[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cb2e9652-63bc-4e83-82d7-6e70d4d50fcb",
+      "comment": "",
+      "command": "type",
+      "target": "id=j_idt8:cpf",
+      "targets": [
+        ["id=j_idt8:cpf", "id"],
+        ["name=j_idt8:cpf", "name"],
+        ["css=#j_idt8\\3A cpf", "css:finder"],
+        ["xpath=//input[@id='j_idt8:cpf']", "xpath:attributes"],
+        ["xpath=//table[@id='j_idt8:j_idt17']/tbody/tr/td[2]/input", "xpath:idRelative"],
+        ["xpath=//td[2]/input", "xpath:position"]
+      ],
+      "value": "03665428009"
+    }, {
+      "id": "4a4d6787-fca1-4995-a525-b0c29e098e9e",
+      "comment": "",
+      "command": "type",
+      "target": "id=j_idt8:nome",
+      "targets": [
+        ["id=j_idt8:nome", "id"],
+        ["name=j_idt8:nome", "name"],
+        ["css=#j_idt8\\3Anome", "css:finder"],
+        ["xpath=//input[@id='j_idt8:nome']", "xpath:attributes"],
+        ["xpath=//table[@id='j_idt8:j_idt17']/tbody/tr[2]/td[2]/input", "xpath:idRelative"],
+        ["xpath=//tr[2]/td[2]/input", "xpath:position"]
+      ],
+      "value": "Sandro Lucas"
+    }, {
+      "id": "b4600366-edec-4e60-9717-51a99f4b5b5a",
+      "comment": "",
+      "command": "type",
+      "target": "id=j_idt8:logradouro",
+      "targets": [
+        ["id=j_idt8:logradouro", "id"],
+        ["name=j_idt8:logradouro", "name"],
+        ["css=#j_idt8\\3Alogradouro", "css:finder"],
+        ["xpath=//input[@id='j_idt8:logradouro']", "xpath:attributes"],
+        ["xpath=//table[@id='j_idt8:j_idt17']/tbody/tr[3]/td[2]/input", "xpath:idRelative"],
+        ["xpath=//tr[3]/td[2]/input", "xpath:position"]
+      ],
+      "value": "Rua dos Bobos"
+    }, {
+      "id": "f24cc4be-a623-407d-a414-f993c179961e",
+      "comment": "",
+      "command": "type",
+      "target": "id=j_idt8:numero",
+      "targets": [
+        ["id=j_idt8:numero", "id"],
+        ["name=j_idt8:numero", "name"],
+        ["css=#j_idt8\\3Anumero", "css:finder"],
+        ["xpath=//input[@id='j_idt8:numero']", "xpath:attributes"],
+        ["xpath=//table[@id='j_idt8:j_idt17']/tbody/tr[4]/td[2]/input", "xpath:idRelative"],
+        ["xpath=//tr[4]/td[2]/input", "xpath:position"]
+      ],
+      "value": "0"
+    }, {
+      "id": "b9841e99-3475-4ab1-addc-0883f2f097a8",
+      "comment": "",
+      "command": "type",
+      "target": "id=j_idt8:complemento",
+      "targets": [
+        ["id=j_idt8:complemento", "id"],
+        ["name=j_idt8:complemento", "name"],
+        ["css=#j_idt8\\3A complemento", "css:finder"],
+        ["xpath=//input[@id='j_idt8:complemento']", "xpath:attributes"],
+        ["xpath=//table[@id='j_idt8:j_idt17']/tbody/tr[5]/td[2]/input", "xpath:idRelative"],
+        ["xpath=//tr[5]/td[2]/input", "xpath:position"]
+      ],
+      "value": "casa"
+    }, {
+      "id": "ec91166e-034c-425d-bcf3-471c7110f26f",
+      "comment": "",
+      "command": "type",
+      "target": "id=j_idt8:municipio",
+      "targets": [
+        ["id=j_idt8:municipio", "id"],
+        ["name=j_idt8:municipio", "name"],
+        ["css=#j_idt8\\3Amunicipio", "css:finder"],
+        ["xpath=//input[@id='j_idt8:municipio']", "xpath:attributes"],
+        ["xpath=//table[@id='j_idt8:j_idt17']/tbody/tr[6]/td[2]/input", "xpath:idRelative"],
+        ["xpath=//tr[6]/td[2]/input", "xpath:position"]
+      ],
+      "value": "Guaíba"
+    }, {
+      "id": "6c736144-1cc1-44ac-a812-359f206a7276",
+      "comment": "",
+      "command": "type",
+      "target": "id=j_idt8:telefone1",
+      "targets": [
+        ["id=j_idt8:telefone1", "id"],
+        ["name=j_idt8:telefone1", "name"],
+        ["css=#j_idt8\\3Atelefone1", "css:finder"],
+        ["xpath=//input[@id='j_idt8:telefone1']", "xpath:attributes"],
+        ["xpath=//table[@id='j_idt8:j_idt17']/tbody/tr[7]/td[2]/input", "xpath:idRelative"],
+        ["xpath=//tr[7]/td[2]/input", "xpath:position"]
+      ],
+      "value": "32139139"
+    }, {
+      "id": "1df8324f-1a38-4c58-839a-5d3539c98928",
+      "comment": "",
+      "command": "type",
+      "target": "id=j_idt8:telefone2",
+      "targets": [
+        ["id=j_idt8:telefone2", "id"],
+        ["name=j_idt8:telefone2", "name"],
+        ["css=#j_idt8\\3Atelefone2", "css:finder"],
+        ["xpath=//input[@id='j_idt8:telefone2']", "xpath:attributes"],
+        ["xpath=//table[@id='j_idt8:j_idt17']/tbody/tr[8]/td[2]/input", "xpath:idRelative"],
+        ["xpath=//tr[8]/td[2]/input", "xpath:position"]
+      ],
+      "value": "08006428222"
+    }, {
+      "id": "7c557789-b163-4e81-a9fb-31cf98476031",
+      "comment": "",
+      "command": "click",
+      "target": "css=#j_idt8\\3Aj_idt26 > .ui-button-text",
+      "targets": [
+        ["css=#j_idt8\\3Aj_idt26 > .ui-button-text", "css:finder"],
+        ["xpath=//button[@id='j_idt8:j_idt26']/span", "xpath:idRelative"],
+        ["xpath=//div[2]/button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Salvar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "b2549cd1-edc8-4d38-9503-65c9d80b0822",
+    "name": "Cadastro de Médico",
+    "commands": [{
+      "id": "c30c8353-3484-419d-98e0-a719c51a6822",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8080/clinica/index.xhtml",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c87e3016-40ea-4b3d-8e14-6fa031c1e0de",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1440x847",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a7ed7c3a-71ac-47dd-b1d3-acdfee22163d",
+      "comment": "",
+      "command": "click",
+      "target": "css=#menu-medicos > .ui-menuitem-text",
+      "targets": [
+        ["css=#menu-medicos > .ui-menuitem-text", "css:finder"],
+        ["xpath=//a[@id='menu-medicos']/span", "xpath:idRelative"],
+        ["xpath=//li[4]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Médicos')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "346bcba5-b110-42ac-bde7-71b03f4068e5",
+      "comment": "",
+      "command": "click",
+      "target": "css=#j_idt8\\3Aj_idt9 > .ui-button-text",
+      "targets": [
+        ["css=#j_idt8\\3Aj_idt9 > .ui-button-text", "css:finder"],
+        ["xpath=//button[@id='j_idt8:j_idt9']/span", "xpath:idRelative"],
+        ["xpath=//button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Novo')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "03db8879-b367-41e0-ac3a-3ef155e80ff6",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=#j_idt8\\3Aj_idt9 > .ui-button-text",
+      "targets": [
+        ["css=#j_idt8\\3Aj_idt9 > .ui-button-text", "css:finder"],
+        ["xpath=//button[@id='j_idt8:j_idt9']/span", "xpath:idRelative"],
+        ["xpath=//button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Novo')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "21b5b35b-00e3-442f-9aa9-e9052d1d6569",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=#j_idt8\\3Aj_idt9 > .ui-button-text",
+      "targets": [
+        ["css=#j_idt8\\3Aj_idt9 > .ui-button-text", "css:finder"],
+        ["xpath=//button[@id='j_idt8:j_idt9']/span", "xpath:idRelative"],
+        ["xpath=//button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Novo')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "dd714764-06b8-438d-a1f4-dda4d0bca901",
+      "comment": "",
+      "command": "click",
+      "target": "id=j_idt8:cpf",
+      "targets": [
+        ["id=j_idt8:cpf", "id"],
+        ["name=j_idt8:cpf", "name"],
+        ["css=#j_idt8\\3A cpf", "css:finder"],
+        ["xpath=//input[@id='j_idt8:cpf']", "xpath:attributes"],
+        ["xpath=//table[@id='j_idt8:j_idt19']/tbody/tr/td[2]/input", "xpath:idRelative"],
+        ["xpath=//td[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "12446a87-7118-48c4-824b-3ba285b00da7",
+      "comment": "",
+      "command": "type",
+      "target": "id=j_idt8:cpf",
+      "targets": [
+        ["id=j_idt8:cpf", "id"],
+        ["name=j_idt8:cpf", "name"],
+        ["css=#j_idt8\\3A cpf", "css:finder"],
+        ["xpath=//input[@id='j_idt8:cpf']", "xpath:attributes"],
+        ["xpath=//table[@id='j_idt8:j_idt19']/tbody/tr/td[2]/input", "xpath:idRelative"],
+        ["xpath=//td[2]/input", "xpath:position"]
+      ],
+      "value": "123456789"
+    }, {
+      "id": "3d8d4403-221e-4446-8073-fdda1a73e364",
+      "comment": "",
+      "command": "type",
+      "target": "id=j_idt8:nome",
+      "targets": [
+        ["id=j_idt8:nome", "id"],
+        ["name=j_idt8:nome", "name"],
+        ["css=#j_idt8\\3Anome", "css:finder"],
+        ["xpath=//input[@id='j_idt8:nome']", "xpath:attributes"],
+        ["xpath=//table[@id='j_idt8:j_idt19']/tbody/tr[2]/td[2]/input", "xpath:idRelative"],
+        ["xpath=//tr[2]/td[2]/input", "xpath:position"]
+      ],
+      "value": "Dr Souto"
+    }, {
+      "id": "2db1ec9d-75f3-4621-99e5-bacbda943500",
+      "comment": "",
+      "command": "type",
+      "target": "id=j_idt8:registro",
+      "targets": [
+        ["id=j_idt8:registro", "id"],
+        ["name=j_idt8:registro", "name"],
+        ["css=#j_idt8\\3Aregistro", "css:finder"],
+        ["xpath=//input[@id='j_idt8:registro']", "xpath:attributes"],
+        ["xpath=//table[@id='j_idt8:j_idt19']/tbody/tr[3]/td[2]/input", "xpath:idRelative"],
+        ["xpath=//tr[3]/td[2]/input", "xpath:position"]
+      ],
+      "value": "CRM 54789"
+    }, {
+      "id": "707ecb14-f3d9-4144-827f-5f999c73f43c",
+      "comment": "",
+      "command": "click",
+      "target": "id=j_idt8:especialidade",
+      "targets": [
+        ["id=j_idt8:especialidade", "id"],
+        ["name=j_idt8:especialidade", "name"],
+        ["css=#j_idt8\\3A especialidade", "css:finder"],
+        ["xpath=//input[@id='j_idt8:especialidade']", "xpath:attributes"],
+        ["xpath=//table[@id='j_idt8:j_idt19']/tbody/tr[4]/td[2]/input", "xpath:idRelative"],
+        ["xpath=//tr[4]/td[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "97a2f4d1-067e-496c-834d-98209bfececc",
+      "comment": "",
+      "command": "type",
+      "target": "id=j_idt8:especialidade",
+      "targets": [
+        ["id=j_idt8:especialidade", "id"],
+        ["name=j_idt8:especialidade", "name"],
+        ["css=#j_idt8\\3A especialidade", "css:finder"],
+        ["xpath=//input[@id='j_idt8:especialidade']", "xpath:attributes"],
+        ["xpath=//table[@id='j_idt8:j_idt19']/tbody/tr[4]/td[2]/input", "xpath:idRelative"],
+        ["xpath=//tr[4]/td[2]/input", "xpath:position"]
+      ],
+      "value": "clinico geral"
+    }, {
+      "id": "8a23e048-be27-4c44-b82b-83852ac8bfe3",
+      "comment": "",
+      "command": "click",
+      "target": "css=#j_idt8\\3Aj_idt24 > .ui-button-text",
+      "targets": [
+        ["css=#j_idt8\\3Aj_idt24 > .ui-button-text", "css:finder"],
+        ["xpath=//button[@id='j_idt8:j_idt24']/span", "xpath:idRelative"],
+        ["xpath=//div[2]/button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Salvar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "38d19a9c-aa61-41f6-bb9c-6f20e8477199",
+    "name": "Cadastro de Atendente",
+    "commands": [{
+      "id": "99375d24-8475-4149-acf0-6c693d7d6ab8",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8080/clinica/index.xhtml",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "17953b2c-40c9-4852-9a8e-ab7f31cb502b",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1440x847",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fb5502d0-f1c5-45b7-8e9e-ef8711f1ad78",
+      "comment": "",
+      "command": "click",
+      "target": "css=#menu-atendentes > .ui-menuitem-text",
+      "targets": [
+        ["css=#menu-atendentes > .ui-menuitem-text", "css:finder"],
+        ["xpath=//a[@id='menu-atendentes']/span", "xpath:idRelative"],
+        ["xpath=//li[5]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Atendentes')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2f932b65-4b8e-4dbc-bb3c-a4d058ab4102",
+      "comment": "",
+      "command": "click",
+      "target": "css=#j_idt8\\3Aj_idt9 > .ui-button-text",
+      "targets": [
+        ["css=#j_idt8\\3Aj_idt9 > .ui-button-text", "css:finder"],
+        ["xpath=//button[@id='j_idt8:j_idt9']/span", "xpath:idRelative"],
+        ["xpath=//button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Novo')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3e8fca7d-cf64-4ef4-9418-2b7e3824e998",
+      "comment": "",
+      "command": "click",
+      "target": "id=j_idt8:cpf",
+      "targets": [
+        ["id=j_idt8:cpf", "id"],
+        ["name=j_idt8:cpf", "name"],
+        ["css=#j_idt8\\3A cpf", "css:finder"],
+        ["xpath=//input[@id='j_idt8:cpf']", "xpath:attributes"],
+        ["xpath=//table[@id='j_idt8:j_idt17']/tbody/tr/td[2]/input", "xpath:idRelative"],
+        ["xpath=//td[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f9b5bb1a-cb38-4941-bf8a-2a97b79ef475",
+      "comment": "",
+      "command": "type",
+      "target": "id=j_idt8:cpf",
+      "targets": [
+        ["id=j_idt8:cpf", "id"],
+        ["name=j_idt8:cpf", "name"],
+        ["css=#j_idt8\\3A cpf", "css:finder"],
+        ["xpath=//input[@id='j_idt8:cpf']", "xpath:attributes"],
+        ["xpath=//table[@id='j_idt8:j_idt17']/tbody/tr/td[2]/input", "xpath:idRelative"],
+        ["xpath=//td[2]/input", "xpath:position"]
+      ],
+      "value": "987654321"
+    }, {
+      "id": "7bb2b091-b781-491d-9982-a1dd41e8a08c",
+      "comment": "",
+      "command": "type",
+      "target": "id=j_idt8:nome",
+      "targets": [
+        ["id=j_idt8:nome", "id"],
+        ["name=j_idt8:nome", "name"],
+        ["css=#j_idt8\\3Anome", "css:finder"],
+        ["xpath=//input[@id='j_idt8:nome']", "xpath:attributes"],
+        ["xpath=//table[@id='j_idt8:j_idt17']/tbody/tr[2]/td[2]/input", "xpath:idRelative"],
+        ["xpath=//tr[2]/td[2]/input", "xpath:position"]
+      ],
+      "value": "Patricia"
+    }, {
+      "id": "3ee6dd8a-e7f1-4bc5-9cf4-8c7dc62d01b9",
+      "comment": "",
+      "command": "click",
+      "target": "css=#j_idt8\\3Aj_idt21 > .ui-button-text",
+      "targets": [
+        ["css=#j_idt8\\3Aj_idt21 > .ui-button-text", "css:finder"],
+        ["xpath=//button[@id='j_idt8:j_idt21']/span", "xpath:idRelative"],
+        ["xpath=//div[2]/button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Salvar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "2596f673-2445-4ec9-a57a-8404b45249aa",
+    "name": "Cadastro de Consulta",
+    "commands": [{
+      "id": "ab472c28-b6d9-464c-a71a-9ec2ccfe2abd",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8080/clinica/consultas.xhtml",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "82a5381a-06b0-4037-a197-4d5d273a1ad0",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1440x843",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1be3e7f2-9a07-4e1c-93ea-46f1173703c2",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ui-button-text",
+      "targets": [
+        ["css=.ui-button-text", "css:finder"],
+        ["xpath=//button[@id='j_idt8:j_idt9']/span", "xpath:idRelative"],
+        ["xpath=//button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Marcar consulta')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7577925b-b92f-4ef3-ae75-354e8bd7307b",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.ui-button-text",
+      "targets": [
+        ["css=.ui-button-text", "css:finder"],
+        ["xpath=//button[@id='j_idt8:j_idt9']/span", "xpath:idRelative"],
+        ["xpath=//button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Marcar consulta')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ae56563b-3f9c-4f90-972a-4a95ad0443ea",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=#j_idt8\\3Aj_idt9 > .ui-button-text",
+      "targets": [
+        ["css=#j_idt8\\3Aj_idt9 > .ui-button-text", "css:finder"],
+        ["xpath=//button[@id='j_idt8:j_idt9']/span", "xpath:idRelative"],
+        ["xpath=//button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Marcar consulta')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1569f611-be95-49d3-92aa-a150b60c9454",
+      "comment": "",
+      "command": "click",
+      "target": "css=#j_idt8\\3Aj_idt24 > .ui-button-text",
+      "targets": [
+        ["css=#j_idt8\\3Aj_idt24 > .ui-button-text", "css:finder"],
+        ["xpath=//button[@id='j_idt8:j_idt24']/span", "xpath:idRelative"],
+        ["xpath=//div[2]/button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Salvar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "4e132d3a-251e-4866-8eb8-bbf1633f8ce6",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["d66c617d-ca96-43b0-a963-cf788939901c"]
+  }],
+  "urls": ["http://localhost:8080/clinica/index.xhtml"],
+  "plugins": []
+}
