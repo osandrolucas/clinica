@@ -466,24 +466,36 @@
       "value": ""
     }]
   }, {
-    "id": "2596f673-2445-4ec9-a57a-8404b45249aa",
-    "name": "Cadastro de Consulta",
+    "id": "1b3b3582-4ca9-49d3-bc5a-c4ac1ad4f17e",
+    "name": "Cadastro de consulta",
     "commands": [{
-      "id": "ab472c28-b6d9-464c-a71a-9ec2ccfe2abd",
+      "id": "e3c55483-f7e7-40b7-a15c-444c71a0f7a4",
       "comment": "",
       "command": "open",
-      "target": "http://localhost:8080/clinica/consultas.xhtml",
+      "target": "http://localhost:8080/clinica/index.xhtml",
       "targets": [],
       "value": ""
     }, {
-      "id": "82a5381a-06b0-4037-a197-4d5d273a1ad0",
+      "id": "f34d8bbd-78b2-4405-a2ce-6adfa08ee83b",
       "comment": "",
       "command": "setWindowSize",
-      "target": "1440x843",
+      "target": "550x603",
       "targets": [],
       "value": ""
     }, {
-      "id": "1be3e7f2-9a07-4e1c-93ea-46f1173703c2",
+      "id": "c3702997-0412-4463-9d61-19974d17550f",
+      "comment": "",
+      "command": "click",
+      "target": "css=#menu-consultas > .ui-menuitem-text",
+      "targets": [
+        ["css=#menu-consultas > .ui-menuitem-text", "css:finder"],
+        ["xpath=//a[@id='menu-consultas']/span", "xpath:idRelative"],
+        ["xpath=//li[2]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Consultas')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a1bf5f04-d33d-4073-93ec-5db70d27c845",
       "comment": "",
       "command": "click",
       "target": "css=.ui-button-text",
@@ -495,31 +507,73 @@
       ],
       "value": ""
     }, {
-      "id": "7577925b-b92f-4ef3-ae75-354e8bd7307b",
+      "id": "63c1b270-69ea-4a1b-8559-452c883bf2d6",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ui-button-icon-left",
+      "targets": [
+        ["css=.ui-button-icon-left", "css:finder"],
+        ["xpath=//span[@id='j_idt8:data']/button/span", "xpath:idRelative"],
+        ["xpath=//span/button/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b7c1cbb5-1fff-4d65-9682-7da9d7dd19df",
       "comment": "",
       "command": "mouseOver",
-      "target": "css=.ui-button-text",
+      "target": "css=.ui-button-icon-left",
       "targets": [
-        ["css=.ui-button-text", "css:finder"],
-        ["xpath=//button[@id='j_idt8:j_idt9']/span", "xpath:idRelative"],
-        ["xpath=//button/span", "xpath:position"],
-        ["xpath=//span[contains(.,'Marcar consulta')]", "xpath:innerText"]
+        ["css=.ui-button-icon-left", "css:finder"],
+        ["xpath=//span[@id='j_idt8:data']/button/span", "xpath:idRelative"],
+        ["xpath=//span/button/span", "xpath:position"]
       ],
       "value": ""
     }, {
-      "id": "ae56563b-3f9c-4f90-972a-4a95ad0443ea",
+      "id": "1981aba0-def1-4e41-ba54-502e5bccdd7e",
       "comment": "",
       "command": "mouseOut",
-      "target": "css=#j_idt8\\3Aj_idt9 > .ui-button-text",
+      "target": "css=.ui-button-icon-left",
       "targets": [
-        ["css=#j_idt8\\3Aj_idt9 > .ui-button-text", "css:finder"],
-        ["xpath=//button[@id='j_idt8:j_idt9']/span", "xpath:idRelative"],
-        ["xpath=//button/span", "xpath:position"],
-        ["xpath=//span[contains(.,'Marcar consulta')]", "xpath:innerText"]
+        ["css=.ui-button-icon-left", "css:finder"],
+        ["xpath=//span[@id='j_idt8:data']/button/span", "xpath:idRelative"],
+        ["xpath=//span/button/span", "xpath:position"]
       ],
       "value": ""
     }, {
-      "id": "1569f611-be95-49d3-92aa-a150b60c9454",
+      "id": "642110d1-20be-4471-8633-7c0b618480b0",
+      "comment": "",
+      "command": "mouseDown",
+      "target": "css=.ui_tpicker_hour_slider",
+      "targets": [
+        ["css=.ui_tpicker_hour_slider", "css:finder"],
+        ["xpath=//div[@id='ui-datepicker-div']/div[2]/dl/dd[2]/div", "xpath:idRelative"],
+        ["xpath=//dd[2]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8c5b3992-1d61-43ad-bad6-b54c5bce5973",
+      "comment": "",
+      "command": "mouseUp",
+      "target": "css=.ui-state-focus",
+      "targets": [
+        ["css=.ui-state-focus", "css:finder"],
+        ["xpath=//div[@id='ui-datepicker-div']/div[2]/dl/dd[2]/div/span", "xpath:idRelative"],
+        ["xpath=//dd[2]/div/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1ec5397a-997e-4d50-86c9-f48a377a0cc7",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ui_tpicker_hour_slider",
+      "targets": [
+        ["css=.ui_tpicker_hour_slider", "css:finder"],
+        ["xpath=//div[@id='ui-datepicker-div']/div[2]/dl/dd[2]/div", "xpath:idRelative"],
+        ["xpath=//dd[2]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c8c93aaa-6f2c-49a6-a2ec-000a4cdcafe6",
       "comment": "",
       "command": "click",
       "target": "css=#j_idt8\\3Aj_idt24 > .ui-button-text",
