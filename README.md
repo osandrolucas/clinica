@@ -49,7 +49,14 @@ mysql -u root -p clinicatest < clinica.sql
 
 
 ## Comandos para Deploy
-Para gerar o pacote WAR, o seguinte comando deve ser executado no diretório raiz do projeto (o qual contém o arquivo "pom.xml"):
+Os comandos a seguir devem ser executados no diretório raiz do projeto (o qual contém o arquivo "pom.xml").
+
+Para gerar o relatório do PMD:
+* mvn pmd:pmd
+
+Feito isto, o relatório será disponibilizado em: target/pmd.xml.
+
+Para gerar o pacote WAR:
 * mvn package
 
 Feito isto, o arquivo do pacote será disponibilizado em: target/clinica.war.
