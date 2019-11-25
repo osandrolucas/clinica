@@ -13,6 +13,7 @@ O objetivo é automaticar o processo de validação do código fonte e deploy.
 * MySQL
 * Maven
 * Tomcat 9
+* PMD
 
 ## Ambiente
 * Lubuntu 19.04 (Máquina Virtual)
