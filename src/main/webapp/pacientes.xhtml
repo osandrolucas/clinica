@@ -6,7 +6,7 @@
              template="admin.xhtml">
 
     <h:form>
-        <p:commandButton value="Novo" action="#{pacienteBean.novo()}" update="@form dialogo" />
+        <p:commandButton id="novo" value="Novo" action="#{pacienteBean.novo()}" update="@form dialogo" />
 
         <p:dataTable id="lista" value="#{pacienteBean.pacientes}" var="pacientet">
             <p:column headerText="Nome">
