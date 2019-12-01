@@ -9,8 +9,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 //import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.remote.RemoteWebDriver;
-import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -20,8 +18,6 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.Keys;
 import java.util.*;
-import java.net.MalformedURLException;
-import java.net.URL;
 public class SeleniumJUnitTest {
   private WebDriver driver;
   private Map<String, Object> vars;
@@ -39,8 +35,8 @@ public class SeleniumJUnitTest {
   }
   @Test
   public void seleniumJUnit() {
-    driver.get("http://localhost:8080/clinica/index.xhtml");
-    driver.manage().window().setSize(new Dimension(550, 611));
+    driver.get("http://localhost:8080/clinica/");
+    driver.manage().window().setSize(new Dimension(550, 705));
     driver.findElement(By.cssSelector("#menu-atendentes > .ui-menuitem-text")).click();
     driver.findElement(By.cssSelector(".ui-button-text")).click();
     {
@@ -53,13 +49,12 @@ public class SeleniumJUnitTest {
       Actions builder = new Actions(driver);
       builder.moveToElement(element, 0, 0).perform();
     }
-    driver.findElement(By.id("j_idt8:cpf")).click();
-    driver.findElement(By.id("j_idt8:cpf")).sendKeys("123");
-    driver.findElement(By.cssSelector(".ui-widget-content:nth-child(2) > .ui-panelgrid-cell:nth-child(1)")).click();
-    driver.findElement(By.id("j_idt8:nome")).click();
-    driver.findElement(By.id("j_idt8:nome")).sendKeys("Fulano");
-    driver.findElement(By.cssSelector("#j_idt8\\3Aj_idt21 > .ui-button-text")).click();
-    driver.findElement(By.cssSelector("#menu-medicos > .ui-menuitem-text")).click();
+    driver.findElement(By.id("form_atendentes:cpf")).click();
+    driver.findElement(By.id("form_atendentes:cpf")).sendKeys("123");
+    driver.findElement(By.id("form_atendentes:nome")).click();
+    driver.findElement(By.id("form_atendentes:nome")).sendKeys("Antônio");
+    driver.findElement(By.cssSelector("#form_atendentes\\3A btn_salvar > .ui-button-text")).click();
+    driver.findElement(By.id("menu-medicos")).click();
     driver.findElement(By.cssSelector(".ui-button-text")).click();
     {
       WebElement element = driver.findElement(By.cssSelector(".ui-button-text"));
@@ -71,18 +66,15 @@ public class SeleniumJUnitTest {
       Actions builder = new Actions(driver);
       builder.moveToElement(element, 0, 0).perform();
     }
-    driver.findElement(By.id("j_idt8:cpf")).click();
-    driver.findElement(By.id("j_idt8:cpf")).sendKeys("456");
-    driver.findElement(By.cssSelector(".ui-widget-content:nth-child(2) > .ui-panelgrid-cell:nth-child(1)")).click();
-    driver.findElement(By.id("j_idt8:nome")).click();
-    driver.findElement(By.id("j_idt8:nome")).sendKeys("Beltrano");
-    driver.findElement(By.cssSelector(".ui-widget-content:nth-child(3) > .ui-panelgrid-cell:nth-child(1)")).click();
-    driver.findElement(By.id("j_idt8:registro")).click();
-    driver.findElement(By.id("j_idt8:registro")).sendKeys("456");
-    driver.findElement(By.cssSelector(".ui-widget-content:nth-child(3) > .ui-panelgrid-cell:nth-child(1)")).click();
-    driver.findElement(By.id("j_idt8:especialidade")).click();
-    driver.findElement(By.id("j_idt8:especialidade")).sendKeys("Cardiologia");
-    driver.findElement(By.cssSelector("#j_idt8\\3Aj_idt24 > .ui-button-text")).click();
+    driver.findElement(By.id("form_medicos:cpf")).click();
+    driver.findElement(By.id("form_medicos:cpf")).sendKeys("456");
+    driver.findElement(By.id("form_medicos:nome")).click();
+    driver.findElement(By.id("form_medicos:nome")).sendKeys("João");
+    driver.findElement(By.id("form_medicos:registro")).click();
+    driver.findElement(By.id("form_medicos:registro")).sendKeys("456");
+    driver.findElement(By.id("form_medicos:especialidade")).click();
+    driver.findElement(By.id("form_medicos:especialidade")).sendKeys("Cardiologia");
+    driver.findElement(By.cssSelector("#form_medicos\\3A btn_salvar > .ui-button-text")).click();
     driver.findElement(By.cssSelector("#menu-pacientes > .ui-menuitem-text")).click();
     driver.findElement(By.cssSelector(".ui-button-text")).click();
     {
@@ -95,47 +87,20 @@ public class SeleniumJUnitTest {
       Actions builder = new Actions(driver);
       builder.moveToElement(element, 0, 0).perform();
     }
-    driver.findElement(By.id("j_idt8:cpf")).click();
-    driver.findElement(By.id("j_idt8:cpf")).sendKeys("789");
-    driver.findElement(By.id("j_idt8:nome")).sendKeys("Sicrano");
-    driver.findElement(By.cssSelector("#j_idt8\\3Aj_idt26 > .ui-button-text")).click();
+    driver.findElement(By.id("form_pacientes:cpf")).click();
+    driver.findElement(By.id("form_pacientes:cpf")).sendKeys("789");
+    driver.findElement(By.id("form_pacientes:nome")).click();
+    driver.findElement(By.id("form_pacientes:nome")).sendKeys("Alberto");
+    driver.findElement(By.cssSelector("#form_pacientes\\3A btn_salvar > .ui-button-text")).click();
     driver.findElement(By.cssSelector("#menu-consultas > .ui-menuitem-text")).click();
     driver.findElement(By.cssSelector(".ui-button-text")).click();
-    driver.findElement(By.cssSelector(".ui-button-icon-left")).click();
-    {
-      WebElement element = driver.findElement(By.cssSelector(".ui-button-icon-left"));
-      Actions builder = new Actions(driver);
-      builder.moveToElement(element).perform();
-    }
-    {
-      WebElement element = driver.findElement(By.tagName("body"));
-      Actions builder = new Actions(driver);
-      builder.moveToElement(element, 0, 0).perform();
-    }
-    {
-      WebElement element = driver.findElement(By.cssSelector(".ui-state-focus"));
-      Actions builder = new Actions(driver);
-      builder.moveToElement(element).clickAndHold().perform();
-    }
-    {
-      WebElement element = driver.findElement(By.cssSelector(".ui-state-focus"));
-      Actions builder = new Actions(driver);
-      builder.moveToElement(element).perform();
-    }
-    {
-      WebElement element = driver.findElement(By.cssSelector(".ui-state-focus"));
-      Actions builder = new Actions(driver);
-      builder.moveToElement(element).release().perform();
-    }
-    driver.findElement(By.cssSelector(".ui-state-focus")).click();
-    driver.findElement(By.id("j_idt8:dialogo_content")).click();
-    driver.findElement(By.cssSelector("#j_idt8\\3Aj_idt24 > .ui-button-text")).click();
-    driver.findElement(By.cssSelector("#j_idt8\\3Alista\\3A 0\\3Aj_idt17 > .ui-button-text")).click();
-    driver.findElement(By.cssSelector("#menu-pacientes > .ui-menuitem-text")).click();
-    driver.findElement(By.cssSelector("#j_idt8\\3Alista\\3A 0\\3Aj_idt16 > .ui-button-text")).click();
-    driver.findElement(By.id("menu-medicos")).click();
-    driver.findElement(By.cssSelector("#j_idt8\\3Alista\\3A 0\\3Aj_idt18 > .ui-button-text")).click();
+    driver.findElement(By.cssSelector("#form_consultas\\3A btn_salvar > .ui-button-text")).click();
+    driver.findElement(By.cssSelector("#form_consultas\\3Alista\\3A 0\\3Aj_idt16 > .ui-button-text")).click();
+    driver.findElement(By.id("menu-pacientes")).click();
+    driver.findElement(By.cssSelector("#form_pacientes\\3Alista\\3A 0\\3Aj_idt15 > .ui-button-text")).click();
+    driver.findElement(By.cssSelector("#menu-medicos > .ui-menuitem-text")).click();
+    driver.findElement(By.cssSelector("#form_medicos\\3Alista\\3A 0\\3Aj_idt17 > .ui-button-text")).click();
     driver.findElement(By.cssSelector("#menu-atendentes > .ui-menuitem-text")).click();
-    driver.findElement(By.cssSelector("#j_idt8\\3Alista\\3A 0\\3Aj_idt16 > .ui-button-text")).click();
+    driver.findElement(By.cssSelector("#form_atendentes\\3Alista\\3A 0\\3Aj_idt15 > .ui-button-text")).click();
   }
 }
