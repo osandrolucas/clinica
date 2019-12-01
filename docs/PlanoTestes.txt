@@ -1,0 +1,105 @@
+TODO: abordar neste documento o Jenkins
+
+Versão temporária do plano de testes em texto puro. A versão final será
+convertida para PDF.
+
+Modelo encontrado em:
+https://www.dropbox.com/s/35oqueqqej0yfkd/ModeloPlanoTeste.docx?dl=0
+
+
+1. Processo de teste
+--------------------
+Após uma alteração no código, deve ser gerado um relatório do PMD como primeiro
+passo para detectar problemas:
+	mvn pmd:pmd
+
+Em caso de problemas, são feitos ajustes no código e o comando é repetido.
+
+Se necessário, é regravada a sessão de interação do usuário no Firefox com o
+uso do Selenium IDE. A interação deve inserir um atendente, um médico e um
+paciente, marcar uma consulta, cancelar a consulta marcada e excluir o médico,
+paciente e atendente inseridos. Feita a gravação, o teste deve ser executado
+pelo Selenium IDE. Caso ocorram travamentos devido a eventos "mouseover" e
+"mouseout", estes, bem como todos os dados inseridos, devem ser excluídos.
+
+Se não ocorrerem problemas, o teste poderá ser finalmente exportado para o
+JUnit, o qual deve ser salvo em src/test/java/clinica/SeleniumJUnitTest.java.
+Após isto, o arquivo deve ser modificado para comentar a linha que importa o
+ChromeDriver e inserir no método setUp() a linha:
+    System.setProperty("webdriver.gecko.driver", "<raiz do projeto>/geckodriver");
+
+Como o teste do Selenium requer o aplicativo instalado, o "package" é feito no
+Maven em um primeiro momento sem executar os testes. Para isto, o comando é:
+	mvn package -DskipTests
+
+Com o pacote WAR gerado em target/clinica.war, este é copiado para o diretório
+de aplicativos do Tomcat e o serviço é reiniciado:
+	cp target/clinica.war /var/lib/tomcat9/webapps
+	service tomcat9 restart
+
+Para prosseguir com os testes, é necessário que o geckodriver esteja extraído
+no diretório raiz do projeto:
+	tar -xf geckodriver-<versão>-linux64.tar.gz
+
+Feito isto, o "package" já pode ser feito novamente no Maven sem deixar de
+executar os testes:
+	mvn package
+
+São executados dois testes automatizados por meio do JUnit: um que envolve a
+manipulação direta do banco de dados (ClinicaTest.java) e o outro, exportado do
+Selemium, simula interações do usuário com o aplicativo via navegador
+(SeleniumJUnitTest.java).
+
+Caso nenhum problema ocorra, o pacote WAR estará no mesmo local
+(target/clinica.war) e, novamente, o mesmo deverá ser copiado para o diretório
+de aplicativos do Tomcat e o serviço deverá ser reiniciado:
+	cp target/clinica.war /var/lib/tomcat9/webapps
+	service tomcat9 restart
+
+
+2. Casos de teste por requisitos
+--------------------------------
+Os requisitos funcionais são:
+*Cadastrar, alterar e excluir atendentes
+*Cadastrar, alterar e excluir médicos
+*Cadastrar, alterar e excluir pacientes
+*Marcar e cancelar consultas
+
+O teste de manipulação direta do banco de dados (ClinicaTest.java) cadastra 
+atendentes, médicos e pacientes e marca uma consulta. No processo, há a
+simulação de um erro de digitação no nome de um médico. Em seguida, é simulada
+uma alteração para corrigir o erro. Por fim, o teste exclui todos os dados que
+inseriu. Desta forma, o teste abrange a marcação e o cancelamento de consultas
+e a inserção e exclusão de atendentes, médicos e pacientes, apesar de abranger
+apenas uma alteração de médico.
+
+O teste de interação do usuário (SeleniumJUnitTest.java) insere um atendente,
+um médico e um paciente, marca uma consulta, cancela a consulta marcada e
+exclui o paciente, médico e atendente inseridos.
+
+
+3. Requisitos de hardware e software
+------------------------------------
+Os testes são feitos em uma máquina virtual com 3 GB de memória RAM e 10 GB de
+armazenamento.
+
+Os requisitos de software são:
+*Sistema operacional Lubuntu 19.04
+*Apache HTTP Server
+*Apache Tomcat 9
+*MySQL
+*Maven
+*Plugin do JUnit para o Maven
+*Plugin do PMD para o Maven
+*Plugin do Selenium para o Maven
+*Firefox (versão)
+*Extensão Selenium IDE para o Firefox
+*geckodriver
+*Jenkins
+
+4. Procedimento de registro de testes
+-------------------------------------
+Durante a execução dos testes, as descrições de eventuais bugs encontrados são
+escritas em um arquivo de texto puro. Feitas as correções, os testes são
+repetidos e os bugs no mesmo arquivo marcados como resolvidos. A análise
+posterior do arquivo serve como base para a criação de novos testes.
