@@ -5,7 +5,7 @@
              xmlns:p="http://primefaces.org/ui"
              template="admin.xhtml">
 
-    <h:form>
+    <h:form id="form_pacientes">
         <p:commandButton id="novo" value="Novo" action="#{pacienteBean.novo()}" update="@form dialogo" />
 
         <p:dataTable id="lista" value="#{pacienteBean.pacientes}" var="pacientet">
@@ -47,7 +47,7 @@
                 <h:outputLabel value="Telefone 2" />
                 <p:inputText id="telefone2" value="#{pacienteBean.paciente.telefone2}"/>
             </p:panelGrid>
-            <p:commandButton value="Salvar" action="#{pacienteBean.salvar()}" update="lista" />
+            <p:commandButton id="btn_salvar" value="Salvar" action="#{pacienteBean.salvar()}" update="lista" />
         </p:dialog>
     </h:form>
 </ui:decorate>

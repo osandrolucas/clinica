@@ -5,7 +5,7 @@
              xmlns:p="http://primefaces.org/ui"
              template="admin.xhtml">
 
-    <h:form>
+    <h:form id="form_consultas">
         <p:commandButton id="novo" value="Marcar consulta" action="#{consultaBean.novo()}" update="@all" />
 
         <p:dataTable id="lista" value="#{consultaBean.consultas}" var="consultat">
@@ -39,7 +39,7 @@
                 <p:calendar id="data" value="#{consultaBean.consulta.dataHora}" pattern="dd/MM/yyyy HH:mm" showOn="button" />
             </p:panelGrid>
 
-            <p:commandButton value="Salvar" action="#{consultaBean.salvar()}" update="lista"/>
+            <p:commandButton id="btn_salvar" value="Salvar" action="#{consultaBean.salvar()}" update="lista"/>
         </p:dialog>
     </h:form>
 </ui:decorate>

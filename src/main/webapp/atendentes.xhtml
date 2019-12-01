@@ -5,7 +5,7 @@
              xmlns:p="http://primefaces.org/ui"
              template="admin.xhtml">
 
-    <h:form>
+    <h:form id="form_atendentes">
         <p:commandButton id="novo" value="Novo" action="#{atendenteBean.novo()}" update="@form dialogo" />
 
         <p:dataTable id="lista" value="#{atendenteBean.atendentes}" var="atendentet">
@@ -32,7 +32,7 @@
                 <h:outputLabel value="Administrador" />
                 <p:inputSwitch id="admin" value="#{atendenteBean.atendente.admin}" onLabel="Sim" offLabel="Não"/>
             </p:panelGrid>
-            <p:commandButton value="Salvar" action="#{atendenteBean.salvar()}" update="lista" />
+            <p:commandButton id="btn_salvar" value="Salvar" action="#{atendenteBean.salvar()}" update="lista" />
         </p:dialog>
     </h:form>
 </ui:decorate>

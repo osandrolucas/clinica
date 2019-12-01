@@ -5,7 +5,7 @@
              xmlns:p="http://primefaces.org/ui"
              template="admin.xhtml">
 
-    <h:form>
+    <h:form id="form_medicos">
         <p:commandButton id="novo" value="Novo" action="#{medicoBean.novo()}" update="@form dialogo" />
 
         <p:dataTable id="lista" value="#{medicoBean.medicos}" var="medicot">
@@ -38,7 +38,7 @@
                 <h:outputLabel value="Especialidade" />
                 <p:inputText id="especialidade" value="#{medicoBean.medico.especialidade}"/>
             </p:panelGrid>
-            <p:commandButton value="Salvar" action="#{medicoBean.salvar()}" update="lista" />
+            <p:commandButton id="btn_salvar" value="Salvar" action="#{medicoBean.salvar()}" update="lista" />
         </p:dialog>
     </h:form>
 </ui:decorate>
