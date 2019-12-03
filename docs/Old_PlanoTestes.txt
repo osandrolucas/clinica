@@ -9,18 +9,18 @@ https://www.dropbox.com/s/35oqueqqej0yfkd/ModeloPlanoTeste.docx?dl=0
 
 1. Processo de teste
 --------------------
-Após uma alteração no código, deve ser gerado um relatório do PMD como primeiro
+Sempre que houver uma alteração no código, deve ser gerado um relatório do PMD como primeiro
 passo para detectar problemas:
-	mvn pmd:pmd
+Comando 1: mvn pmd:pmd
 
-Em caso de problemas, são feitos ajustes no código e o comando é repetido.
+Em caso de problemas, devem ser feitos os ajustes no código e o comando 1 deve ser repetido.
 
 Se necessário, é regravada a sessão de interação do usuário no Firefox com o
 uso do Selenium IDE. A interação deve inserir um atendente, um médico e um
 paciente, marcar uma consulta, cancelar a consulta marcada e excluir o médico,
 paciente e atendente inseridos. Feita a gravação, o teste deve ser executado
 pelo Selenium IDE. Caso ocorram travamentos devido a eventos "mouseover" e
-"mouseout", estes, bem como todos os dados inseridos, devem ser excluídos.
+"mouseout", estes eventos, bem como todos os dados inseridos, devem ser excluídos.
 
 Se não ocorrerem problemas, o teste poderá ser finalmente exportado para o
 JUnit, o qual deve ser salvo em src/test/java/clinica/SeleniumJUnitTest.java.
@@ -28,9 +28,9 @@ Após isto, o arquivo deve ser modificado para comentar a linha que importa o
 ChromeDriver e inserir no método setUp() a linha:
     System.setProperty("webdriver.gecko.driver", "<raiz do projeto>/geckodriver");
 
-Como o teste do Selenium requer o aplicativo instalado, o "package" é feito no
-Maven em um primeiro momento sem executar os testes. Para isto, o comando é:
-	mvn package -DskipTests
+Como o teste do Selenium requer que o deploy do projeto já esteja finalizado, o primeiro "package" é feito no
+Maven sem executar os testes. Para isto, o comando é:
+Comando 2:	mvn package -DskipTests
 
 Com o pacote WAR gerado em target/clinica.war, este é copiado para o diretório
 de aplicativos do Tomcat e o serviço é reiniciado:
