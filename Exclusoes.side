@@ -1,0 +1,149 @@
+{
+  "id": "d073b332-c1ee-499f-98eb-244862df73da",
+  "version": "2.0",
+  "name": "Exclusões",
+  "url": "http://localhost:8080/clinica/consultas.xhtml",
+  "tests": [{
+    "id": "9a7014a2-4d05-4041-a0e8-0d76f2609220",
+    "name": "Exclui Atendente",
+    "commands": [{
+      "id": "45b71efe-cbf4-408a-9f91-38ab00f5266a",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8080/clinica/atendentes.xhtml",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "02f96f00-5860-49c1-a5c9-911e6997714e",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1358x709",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f46faa1e-11aa-4cdc-9e9a-5b07f590e4a4",
+      "comment": "",
+      "command": "click",
+      "target": "id=form_atendentes:lista:0:j_idt14",
+      "targets": [
+        ["id=form_atendentes:lista:0:j_idt14", "id"],
+        ["name=form_atendentes:lista:0:j_idt14", "name"],
+        ["css=#form_atendentes\\3Alista\\3A 0\\3Aj_idt14", "css:finder"],
+        ["xpath=//button[@id='form_atendentes:lista:0:j_idt14']", "xpath:attributes"],
+        ["xpath=//tbody[@id='form_atendentes:lista_data']/tr/td[3]/button[2]", "xpath:idRelative"],
+        ["xpath=//button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Excluir')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "5fa48a21-fa03-40b9-ae74-291eda3263c2",
+    "name": "Exclui Médico",
+    "commands": [{
+      "id": "edd5e4e4-8848-4e66-9448-e5e387f04fb2",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8080/clinica/medicos.xhtml",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4e9fbf1e-80be-4df6-9bf7-068455429920",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1358x709",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6f16c535-34f4-405a-bcab-08cc440121d1",
+      "comment": "",
+      "command": "click",
+      "target": "id=form_medicos:lista:0:j_idt16",
+      "targets": [
+        ["id=form_medicos:lista:0:j_idt16", "id"],
+        ["name=form_medicos:lista:0:j_idt16", "name"],
+        ["css=#form_medicos\\3Alista\\3A 0\\3Aj_idt16", "css:finder"],
+        ["xpath=//button[@id='form_medicos:lista:0:j_idt16']", "xpath:attributes"],
+        ["xpath=//tbody[@id='form_medicos:lista_data']/tr/td[4]/button[2]", "xpath:idRelative"],
+        ["xpath=//button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Excluir')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "f83b457d-7fac-487e-b390-acdf0cf2b991",
+    "name": "Exclui Paciente",
+    "commands": [{
+      "id": "4b64165e-8b96-421f-8c0a-74615ee53ea2",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8080/clinica/pacientes.xhtml",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3fbfa4ca-fe58-4894-a3e9-6abe393ab5b2",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1358x709",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fd18f2c9-3543-4740-8c09-ad462f1691e3",
+      "comment": "",
+      "command": "click",
+      "target": "id=form_pacientes:lista:0:j_idt14",
+      "targets": [
+        ["id=form_pacientes:lista:0:j_idt14", "id"],
+        ["name=form_pacientes:lista:0:j_idt14", "name"],
+        ["css=#form_pacientes\\3Alista\\3A 0\\3Aj_idt14", "css:finder"],
+        ["xpath=//button[@id='form_pacientes:lista:0:j_idt14']", "xpath:attributes"],
+        ["xpath=//tbody[@id='form_pacientes:lista_data']/tr/td[3]/button[2]", "xpath:idRelative"],
+        ["xpath=//button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Excluir')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "34b76523-c8e3-435c-b4bd-462b035d930d",
+    "name": "Exclui Consulta",
+    "commands": [{
+      "id": "f107a82a-aeb2-42bc-ab2e-4fc2f91afaf5",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8080/clinica/consultas.xhtml",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8eee3949-ff3c-4233-a1a2-3e5a862ce1d7",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1358x709",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c0590901-fe70-4a48-9663-12d8c95fab80",
+      "comment": "",
+      "command": "click",
+      "target": "id=form_consultas:lista:0:j_idt15",
+      "targets": [
+        ["id=form_consultas:lista:0:j_idt15", "id"],
+        ["name=form_consultas:lista:0:j_idt15", "name"],
+        ["css=#form_consultas\\3Alista\\3A 0\\3Aj_idt15", "css:finder"],
+        ["xpath=//button[@id='form_consultas:lista:0:j_idt15']", "xpath:attributes"],
+        ["xpath=//tbody[@id='form_consultas:lista_data']/tr/td[4]/button", "xpath:idRelative"],
+        ["xpath=//td[4]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Cancelar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "81fe5abe-9071-43a1-abfc-4911cd8adc36",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": [],
+  "plugins": []
+}

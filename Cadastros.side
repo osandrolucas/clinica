@@ -1,0 +1,405 @@
+{
+  "id": "b5532ac4-691e-49ea-81ea-48f8018708e6",
+  "version": "2.0",
+  "name": "Cadastros",
+  "url": "http://localhost:8080/clinica/consultas.xhtml",
+  "tests": [{
+    "id": "59733896-dd58-4817-99de-efa8d804da2b",
+    "name": "Cadastro de Atendente",
+    "commands": [{
+      "id": "a76d4157-7b59-4a8a-8264-6cb046359cbd",
+      "comment": "",
+      "command": "open",
+      "target": "/clinica/atendentes.xhtml",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "130a1898-86f7-4670-8e0d-d39390937426",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1358x709",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d7e1cfc0-6f22-43c5-8b0d-bd7f13d3c385",
+      "comment": "",
+      "command": "click",
+      "target": "id=form_atendentes:novo",
+      "targets": [
+        ["id=form_atendentes:novo", "id"],
+        ["name=form_atendentes:novo", "name"],
+        ["css=#form_atendentes\\3Anovo", "css:finder"],
+        ["xpath=//button[@id='form_atendentes:novo']", "xpath:attributes"],
+        ["xpath=//form[@id='form_atendentes']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Novo')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2d094e7d-d93a-4adc-93ac-d70860753293",
+      "comment": "",
+      "command": "type",
+      "target": "id=form_atendentes:cpf",
+      "targets": [
+        ["id=form_atendentes:cpf", "id"],
+        ["name=form_atendentes:cpf", "name"],
+        ["css=#form_atendentes\\3A cpf", "css:finder"],
+        ["xpath=//input[@id='form_atendentes:cpf']", "xpath:attributes"],
+        ["xpath=//table[@id='form_atendentes:j_idt15']/tbody/tr/td[2]/input", "xpath:idRelative"],
+        ["xpath=//td[2]/input", "xpath:position"]
+      ],
+      "value": "123456789"
+    }, {
+      "id": "d785e6be-2612-46e6-8bd2-f28460c63e2e",
+      "comment": "",
+      "command": "type",
+      "target": "id=form_atendentes:nome",
+      "targets": [
+        ["id=form_atendentes:nome", "id"],
+        ["name=form_atendentes:nome", "name"],
+        ["css=#form_atendentes\\3Anome", "css:finder"],
+        ["xpath=//input[@id='form_atendentes:nome']", "xpath:attributes"],
+        ["xpath=//table[@id='form_atendentes:j_idt15']/tbody/tr[2]/td[2]/input", "xpath:idRelative"],
+        ["xpath=//tr[2]/td[2]/input", "xpath:position"]
+      ],
+      "value": "atendente"
+    }, {
+      "id": "72d9dde7-11fb-4402-a2aa-12875b6753d0",
+      "comment": "",
+      "command": "click",
+      "target": "id=form_atendentes:btn_salvar",
+      "targets": [
+        ["id=form_atendentes:btn_salvar", "id"],
+        ["name=form_atendentes:btn_salvar", "name"],
+        ["css=#form_atendentes\\3A btn_salvar", "css:finder"],
+        ["xpath=//button[@id='form_atendentes:btn_salvar']", "xpath:attributes"],
+        ["xpath=//div[@id='form_atendentes:dialogo_content']/button", "xpath:idRelative"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Salvar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "d7f05692-8bb8-4ce3-b138-30fa03184ddf",
+    "name": "Cadastro de Médicos",
+    "commands": [{
+      "id": "8ad7288f-7d99-4840-9bb3-1530c062b350",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8080/clinica/medicos.xhtml",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "089bb654-3450-40e9-b0f4-a30897b5ae77",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1358x709",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d36f5241-a1d9-4c1c-a0ec-00f5b419e37e",
+      "comment": "",
+      "command": "click",
+      "target": "id=form_medicos:novo",
+      "targets": [
+        ["id=form_medicos:novo", "id"],
+        ["name=form_medicos:novo", "name"],
+        ["css=#form_medicos\\3Anovo", "css:finder"],
+        ["xpath=//button[@id='form_medicos:novo']", "xpath:attributes"],
+        ["xpath=//form[@id='form_medicos']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Novo')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ae3d3556-d6ff-4369-ae84-5309002b3595",
+      "comment": "",
+      "command": "type",
+      "target": "id=form_medicos:cpf",
+      "targets": [
+        ["id=form_medicos:cpf", "id"],
+        ["name=form_medicos:cpf", "name"],
+        ["css=#form_medicos\\3A cpf", "css:finder"],
+        ["xpath=//input[@id='form_medicos:cpf']", "xpath:attributes"],
+        ["xpath=//table[@id='form_medicos:j_idt17']/tbody/tr/td[2]/input", "xpath:idRelative"],
+        ["xpath=//td[2]/input", "xpath:position"]
+      ],
+      "value": "98765432100"
+    }, {
+      "id": "0d7ba511-6403-468c-b7ab-2e232e460dff",
+      "comment": "",
+      "command": "type",
+      "target": "id=form_medicos:nome",
+      "targets": [
+        ["id=form_medicos:nome", "id"],
+        ["name=form_medicos:nome", "name"],
+        ["css=#form_medicos\\3Anome", "css:finder"],
+        ["xpath=//input[@id='form_medicos:nome']", "xpath:attributes"],
+        ["xpath=//table[@id='form_medicos:j_idt17']/tbody/tr[2]/td[2]/input", "xpath:idRelative"],
+        ["xpath=//tr[2]/td[2]/input", "xpath:position"]
+      ],
+      "value": "medico"
+    }, {
+      "id": "3f4b1b0e-7bd7-483e-b412-c0e12a4ec3c2",
+      "comment": "",
+      "command": "type",
+      "target": "id=form_medicos:registro",
+      "targets": [
+        ["id=form_medicos:registro", "id"],
+        ["name=form_medicos:registro", "name"],
+        ["css=#form_medicos\\3Aregistro", "css:finder"],
+        ["xpath=//input[@id='form_medicos:registro']", "xpath:attributes"],
+        ["xpath=//table[@id='form_medicos:j_idt17']/tbody/tr[3]/td[2]/input", "xpath:idRelative"],
+        ["xpath=//tr[3]/td[2]/input", "xpath:position"]
+      ],
+      "value": "12345"
+    }, {
+      "id": "bddcea89-64a4-48f3-ab1b-5e8229a4a5c4",
+      "comment": "",
+      "command": "type",
+      "target": "id=form_medicos:especialidade",
+      "targets": [
+        ["id=form_medicos:especialidade", "id"],
+        ["name=form_medicos:especialidade", "name"],
+        ["css=#form_medicos\\3A especialidade", "css:finder"],
+        ["xpath=//input[@id='form_medicos:especialidade']", "xpath:attributes"],
+        ["xpath=//table[@id='form_medicos:j_idt17']/tbody/tr[4]/td[2]/input", "xpath:idRelative"],
+        ["xpath=//tr[4]/td[2]/input", "xpath:position"]
+      ],
+      "value": "clinico geral"
+    }, {
+      "id": "375d6412-a4e0-4b46-9bf8-70e074f0192e",
+      "comment": "",
+      "command": "click",
+      "target": "id=form_medicos:btn_salvar",
+      "targets": [
+        ["id=form_medicos:btn_salvar", "id"],
+        ["name=form_medicos:btn_salvar", "name"],
+        ["css=#form_medicos\\3A btn_salvar", "css:finder"],
+        ["xpath=//button[@id='form_medicos:btn_salvar']", "xpath:attributes"],
+        ["xpath=//div[@id='form_medicos:dialogo_content']/button", "xpath:idRelative"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Salvar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "32ed15c0-82f8-4196-805e-52f8fc3d2fa2",
+    "name": "Cadastro de Pacientes",
+    "commands": [{
+      "id": "1afb58d8-c968-4edd-bbf4-434ce7033507",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8080/clinica/pacientes.xhtml",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9fde429f-7264-4ff3-8faf-4374561e689e",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1358x709",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4fe2fee7-78c8-4351-acca-28c4426642c3",
+      "comment": "",
+      "command": "click",
+      "target": "id=form_pacientes:novo",
+      "targets": [
+        ["id=form_pacientes:novo", "id"],
+        ["name=form_pacientes:novo", "name"],
+        ["css=#form_pacientes\\3Anovo", "css:finder"],
+        ["xpath=//button[@id='form_pacientes:novo']", "xpath:attributes"],
+        ["xpath=//form[@id='form_pacientes']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Novo')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "471b327b-6a89-45c7-bff0-174df0b2fa7b",
+      "comment": "",
+      "command": "type",
+      "target": "id=form_pacientes:cpf",
+      "targets": [
+        ["id=form_pacientes:cpf", "id"],
+        ["name=form_pacientes:cpf", "name"],
+        ["css=#form_pacientes\\3A cpf", "css:finder"],
+        ["xpath=//input[@id='form_pacientes:cpf']", "xpath:attributes"],
+        ["xpath=//table[@id='form_pacientes:j_idt15']/tbody/tr/td[2]/input", "xpath:idRelative"],
+        ["xpath=//td[2]/input", "xpath:position"]
+      ],
+      "value": "00000000000"
+    }, {
+      "id": "18ec4c9d-7806-46a6-b7bd-2182a127a1c6",
+      "comment": "",
+      "command": "type",
+      "target": "id=form_pacientes:nome",
+      "targets": [
+        ["id=form_pacientes:nome", "id"],
+        ["name=form_pacientes:nome", "name"],
+        ["css=#form_pacientes\\3Anome", "css:finder"],
+        ["xpath=//input[@id='form_pacientes:nome']", "xpath:attributes"],
+        ["xpath=//table[@id='form_pacientes:j_idt15']/tbody/tr[2]/td[2]/input", "xpath:idRelative"],
+        ["xpath=//tr[2]/td[2]/input", "xpath:position"]
+      ],
+      "value": "paciente"
+    }, {
+      "id": "3521fea9-850f-4ebd-83ee-8a3fd4bbf800",
+      "comment": "",
+      "command": "type",
+      "target": "id=form_pacientes:logradouro",
+      "targets": [
+        ["id=form_pacientes:logradouro", "id"],
+        ["name=form_pacientes:logradouro", "name"],
+        ["css=#form_pacientes\\3Alogradouro", "css:finder"],
+        ["xpath=//input[@id='form_pacientes:logradouro']", "xpath:attributes"],
+        ["xpath=//table[@id='form_pacientes:j_idt15']/tbody/tr[3]/td[2]/input", "xpath:idRelative"],
+        ["xpath=//tr[3]/td[2]/input", "xpath:position"]
+      ],
+      "value": "rua x"
+    }, {
+      "id": "4f8053ad-b9db-4f1b-a168-a44e283eab13",
+      "comment": "",
+      "command": "type",
+      "target": "id=form_pacientes:numero",
+      "targets": [
+        ["id=form_pacientes:numero", "id"],
+        ["name=form_pacientes:numero", "name"],
+        ["css=#form_pacientes\\3Anumero", "css:finder"],
+        ["xpath=//input[@id='form_pacientes:numero']", "xpath:attributes"],
+        ["xpath=//table[@id='form_pacientes:j_idt15']/tbody/tr[4]/td[2]/input", "xpath:idRelative"],
+        ["xpath=//tr[4]/td[2]/input", "xpath:position"]
+      ],
+      "value": "10"
+    }, {
+      "id": "747ce39f-6868-4236-9110-f7b5e9171540",
+      "comment": "",
+      "command": "type",
+      "target": "id=form_pacientes:complemento",
+      "targets": [
+        ["id=form_pacientes:complemento", "id"],
+        ["name=form_pacientes:complemento", "name"],
+        ["css=#form_pacientes\\3A complemento", "css:finder"],
+        ["xpath=//input[@id='form_pacientes:complemento']", "xpath:attributes"],
+        ["xpath=//table[@id='form_pacientes:j_idt15']/tbody/tr[5]/td[2]/input", "xpath:idRelative"],
+        ["xpath=//tr[5]/td[2]/input", "xpath:position"]
+      ],
+      "value": "casa"
+    }, {
+      "id": "32312448-4161-446c-9ea4-aad7f84171e4",
+      "comment": "",
+      "command": "type",
+      "target": "id=form_pacientes:municipio",
+      "targets": [
+        ["id=form_pacientes:municipio", "id"],
+        ["name=form_pacientes:municipio", "name"],
+        ["css=#form_pacientes\\3Amunicipio", "css:finder"],
+        ["xpath=//input[@id='form_pacientes:municipio']", "xpath:attributes"],
+        ["xpath=//table[@id='form_pacientes:j_idt15']/tbody/tr[6]/td[2]/input", "xpath:idRelative"],
+        ["xpath=//tr[6]/td[2]/input", "xpath:position"]
+      ],
+      "value": "porto alegre"
+    }, {
+      "id": "90af59d8-6574-4f2a-afbc-12a575040ed1",
+      "comment": "",
+      "command": "type",
+      "target": "id=form_pacientes:telefone1",
+      "targets": [
+        ["id=form_pacientes:telefone1", "id"],
+        ["name=form_pacientes:telefone1", "name"],
+        ["css=#form_pacientes\\3Atelefone1", "css:finder"],
+        ["xpath=//input[@id='form_pacientes:telefone1']", "xpath:attributes"],
+        ["xpath=//table[@id='form_pacientes:j_idt15']/tbody/tr[7]/td[2]/input", "xpath:idRelative"],
+        ["xpath=//tr[7]/td[2]/input", "xpath:position"]
+      ],
+      "value": "32139139"
+    }, {
+      "id": "8192edb6-83ad-484f-a89d-bb3e02a7e901",
+      "comment": "",
+      "command": "click",
+      "target": "id=form_pacientes:btn_salvar",
+      "targets": [
+        ["id=form_pacientes:btn_salvar", "id"],
+        ["name=form_pacientes:btn_salvar", "name"],
+        ["css=#form_pacientes\\3A btn_salvar", "css:finder"],
+        ["xpath=//button[@id='form_pacientes:btn_salvar']", "xpath:attributes"],
+        ["xpath=//div[@id='form_pacientes:dialogo_content']/button", "xpath:idRelative"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Salvar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "e2442e6f-920d-419f-8abe-9a54f722f291",
+    "name": "Cadastro de Consultas",
+    "commands": [{
+      "id": "492b584b-6dfb-4783-a7f0-d877c7bb56e9",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8080/clinica/consultas.xhtml",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7ee793e7-9844-4637-9be1-849b6fc0930b",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1358x709",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8fc44405-9071-4248-868b-1668459858ab",
+      "comment": "",
+      "command": "click",
+      "target": "id=form_consultas:novo",
+      "targets": [
+        ["id=form_consultas:novo", "id"],
+        ["name=form_consultas:novo", "name"],
+        ["css=#form_consultas\\3Anovo", "css:finder"],
+        ["xpath=//button[@id='form_consultas:novo']", "xpath:attributes"],
+        ["xpath=//form[@id='form_consultas']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Marcar consulta')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "25f92814-3948-48c8-80e1-0c7133b9ebad",
+      "comment": "",
+      "command": "type",
+      "target": "id=form_consultas:data_input",
+      "targets": [
+        ["id=form_consultas:data_input", "id"],
+        ["name=form_consultas:data_input", "name"],
+        ["css=#form_consultas\\3A data_input", "css:finder"],
+        ["xpath=//input[@id='form_consultas:data_input']", "xpath:attributes"],
+        ["xpath=//span[@id='form_consultas:data']/input", "xpath:idRelative"],
+        ["xpath=//span/input", "xpath:position"]
+      ],
+      "value": "25/12/2019 00:00"
+    }, {
+      "id": "e16f55d0-8ce5-4a3c-a243-5d04c1522aee",
+      "comment": "",
+      "command": "click",
+      "target": "id=form_consultas:btn_salvar",
+      "targets": [
+        ["id=form_consultas:btn_salvar", "id"],
+        ["name=form_consultas:btn_salvar", "name"],
+        ["css=#form_consultas\\3A btn_salvar", "css:finder"],
+        ["xpath=//button[@id='form_consultas:btn_salvar']", "xpath:attributes"],
+        ["xpath=//div[@id='form_consultas:dialogo_content']/button", "xpath:idRelative"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Salvar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "7b427908-4954-457c-b80e-962d65be04a5",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["59733896-dd58-4817-99de-efa8d804da2b"]
+  }],
+  "urls": ["http://localhost:8080/", "http://localhost:8080/clinica/medicos.xhtml", "http://localhost:8080/clinica/consultas.xhtml"],
+  "plugins": []
+}
